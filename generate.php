@@ -48,10 +48,9 @@
         }
 
         $site = "go.it";  
-        $link = $_POST["link"]; 
 
+        $link = $_POST["link"]; 
         $hash = $model->findLink($link); 
-        // check does link exist in DB 
         if ($hash == ""){
             // link doesn't exist in database - create and  insert it
             $last_hash = $model->getLastHash();  
@@ -62,7 +61,7 @@
             $model->insertNewLink($hash, $link); 
         }
         
-        echo "<br />Your link is: " . $site .'/'. $hash; 
+        echo "Your link is: " . $site .'/'. $hash; 
     ?>
 
     <br /><br />

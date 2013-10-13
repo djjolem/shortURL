@@ -17,10 +17,7 @@ class DBConnection {
     }
 
     public function getLink($hash){
-        ini_set("log_errors", 1); 
-        ini_set("error_log", "./out.log"); 
-        error_log("Hello, errors!"); 
-
+        error_log('look for hash: ' . $hash); 
         $result = mysqli_query($this->con, "SELECT * FROM short WHERE hash = '" . $hash . "';"); 
         $row = mysqli_fetch_array($result); 
         if (!is_null($row)){
@@ -48,7 +45,7 @@ class DBConnection {
     }
     // if link exists in DB return hash else return ""
     public function findLink($link){
-        mysqli_query($this->con, "SELECT * FROM short WHERE link = '" . $link . "';");
+        $result = mysqli_query($this->con, "SELECT * FROM short WHERE link = '" . $link . "';");
         $row = mysqli_fetch_array($result);
         if (!is_null($row)){
             return $row['hash']; 

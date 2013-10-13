@@ -7,7 +7,6 @@
     
     <?php 
         include 'DBConnection.php'; 
- 
 
         $hash = $_GET["hash"]; 
         if (isset($hash)){
@@ -23,13 +22,14 @@
             } else {
                 echo '<div> Cant find link with hash: ' . $hash . ' </div>'; 
             }
-        }
-    ?>
+        } else {
+        ?>
 
-    <form action="generate.php" method="post" >
-        Link: <input type="text" name="link" autofocus="autofocus" />
-        <input type="submit" value="Creat" />
-    </form>
+        <form action="generate.php" method="post" >
+            Link: <input type="text" name="link" autofocus="autofocus" />
+            <input type="submit" value="Creat" />
+        </form>
+        <?php } ?> 
 </body>
 </html>
 
