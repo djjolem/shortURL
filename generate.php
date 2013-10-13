@@ -29,7 +29,7 @@
             $ch = next_char($ch); 
 
             $chars[$ind] = $ch; 
-            while ($ch == 'A' || $ch == 'a' || $ch == '0'){
+            while ($ch == '0'){
                 $ind--; 
                 if ($ind < 0) {
                     if ($ch == '0'){ 
