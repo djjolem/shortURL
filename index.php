@@ -10,15 +10,13 @@
 
         $hash = $_GET["hash"]; 
         if (isset($hash)){
-            echo '<br />' . 'hash: ' . $hash . '<br />'; 
-
             $model = new DBConnection; 
             $link = $model->getLink($hash); 
             echo 'Go to link: ' . $link;         
        
 
             if ($link != ""){ 
-                header("Location: " . $link); 
+                header("Location: " . 'http://'. $link); 
             } else {
                 echo '<div> Cant find link with hash: ' . $hash . ' </div>'; 
             }

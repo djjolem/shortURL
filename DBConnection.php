@@ -17,38 +17,29 @@ class DBConnection {
     }
 
     public function getLink($hash){
-        error_log('look for hash: ' . $hash); 
-        $result = mysqli_query($this->con, "SELECT * FROM short WHERE hash = '" . $hash . "';"); 
+        $id = base_convert($hash, 36, 10); 
+
+        $result = mysqli_query($this->con, "SELECT * FROM short WHERE id = '$id';"); 
         $row = mysqli_fetch_array($result); 
         if (!is_null($row)){
-
-            echo 'returnn ' . $row['link']; 
             return $row['link'];  
         }
 
         return ""; 
     }
     
-    public function getLastHash(){
-        $result = mysqli_query($this->con, "SELECT * FROM last_hash LIMIT 1");
-        $row = mysqli_fetch_array($result);
-        $last_hash = $row['last_hash'];
 
-        return $last_hash;    
-    }
-    public function updateHash($hash){
-        mysqli_query($this->con, "UPDATE last_hash SET last_hash = '" . $hash . "';");
+    public function insertNewLink($link){
+        mysqli_query($this->con, "INSERT INTO short (link) VALUES('" . $link . "');");
+        return mysqli_insert_id($this->con); 
     }
 
-    public function insertNewLink($hash, $link){
-        mysqli_query($this->con, "INSERT INTO short VALUES('" . $hash . "','" . $link . "');");
-    }
-    // if link exists in DB return hash else return ""
+    // if link exist in DB return ID -
     public function findLink($link){
         $result = mysqli_query($this->con, "SELECT * FROM short WHERE link = '" . $link . "';");
         $row = mysqli_fetch_array($result);
         if (!is_null($row)){
-            return $row['hash']; 
+            return $row['id']; 
         } 
     
         return "";         
