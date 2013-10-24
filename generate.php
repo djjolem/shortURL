@@ -4,25 +4,25 @@
 
 <body>
     <h5>Creating hash for link:</h5><br />
-    <?php 
-        include 'DBConnection.php'; 
-        $model = new DBConnection;         
+    <?php
+        include 'DBConnection.php';
+        $model = new DBConnection;
 
-        $site = "go.it";  
+        $site = "djm.rs";
 
-        $link = $_POST["link"]; 
-        $id = $model->findLink($link); 
+        $link = $_POST["link"];
+        $id = $model->findLink($link);
         if ($id == ""){
-            $id = $model->insertNewLink($link); 
+            $id = $model->insertNewLink($link);
         }
-        $hash = base_convert($id, 10, 36);  
-        
-        echo "Your link is: " . $site .'/'. $hash; 
+        $hash = base_convert($id, 10, 36);
+
+        echo "Your link is: " . $site .'/'. $hash;
     ?>
 
     <br /><br />
     <a href="./index.php"> Generate another hash </a>
-    
+
 </body>
 </html>
 
