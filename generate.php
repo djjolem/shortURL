@@ -8,7 +8,7 @@
         include 'DBConnection.php';
         $model = new DBConnection;
 
-        $site = "djm.rs";
+        $site = "http://z-surlsurl.rhcloud.com"; 
 
         $link = $_POST["link"];
         $id = $model->findLink($link);
