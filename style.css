@@ -1,0 +1,61 @@
+body {
+    background-color: #f3f8fb;
+    text-align: center;
+}
+
+h1{
+    color: #3a444c;
+}
+
+fieldset {
+    background-color: #60b3df;
+    padding: 10px 20px 10px 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    color: #3a444c;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+a {
+    background-color: #60b3df;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 1px 1px 1px #888888;
+    border-radius: 5x;
+    border: 1px solid grey;
+}
+
+a: link {
+    color: white;
+}
+
+a: visited {
+    color: white;
+}
+
+a: hover {
+    color: #3a444c;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    float: right; 
+    color: white; 
+    background-color: #ee6123; 
+    font-weight: bold; 
+    cursor: pointer;
+    border-radius: 5px; 
+    box-shadow: 1px 1px 1px 1px #888888; 
+    font-size: 14px; 
+    height: 30px; 
+    padding: 2px 20px;
+}
+
