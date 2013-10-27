@@ -1,9 +1,10 @@
 RewriteEngine on
-
-RewriteCond %{REQUEST_FILENAME} !-f
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f 
 RewriteCond %{REQUEST_FILENAME} !-d
 
-RewriteRule ^index\.php.*$ /index.php [L]
-RewriteRule ^([0-9a-z]{1,9})$ /index.php/?hash=$1 [NC,L,QSA,R=301]
 
+#RewriteRule ^index\.php.*$ /index.php [L]
+RewriteRule ^([0-9a-z]{1,9})$ /index.php/?hash=$1 [NC,L,QSA,R=301]
+RewriteRule ^(.*)/+$ $1 [R=301,L]
 
