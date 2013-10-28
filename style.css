@@ -55,3 +55,6 @@ input[type="submit"] {
     padding: 2px 20px;
 }
 
+input[type="submit"]:hover {
+    background-color:#C0C0C0;
+}

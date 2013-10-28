@@ -37,7 +37,8 @@
     <form action="generate.php" method="post" >
         <fieldset>
             <label for="link"> Link </label>
-            <input type="text" id="link" name="link" autofocus="autofocus" />
+            <input type="text" id="link" name="link" autofocus="autofocus"
+		placeholder="Enter link" />
             <input type="submit" value="Create" />
         </fieldset>
     </form>
