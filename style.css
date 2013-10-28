@@ -1,61 +1,57 @@
 body {
-    background-color: #f3f8fb;
+    background-color: #403F3E;
+    font-family: "adelle",Georgia,Helvetica,Arial,sans-serif;
     text-align: center;
 }
 
-h1{
-    color: #3a444c;
+img {
+    height: 300px;
+    width: 600px;
+}
+
+h1 {
+    color: #FFFF00;
 }
 
 fieldset {
-    background-color: #60b3df;
-    padding: 10px 20px 10px 15px;
-    max-width: 400px;
     margin: 0 auto;
+    max-width: 400px;
+    padding: 10px 20px 10px 15px;
 }
 
 label {
-    color: #3a444c;
-    font-weight: bold;
+    color: #FFFF00;
     font-size: 20px;
+    font-weight: bold;
 }
 
 a {
-    background-color: #60b3df;
-    padding: 10px;
-    font-weight: bold;
+    background-color: #60B3DF;
+    border: 1px solid #808080;
+    box-shadow: 1px 1px 1px #888888;
     font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
-    box-shadow: 1px 1px 1px #888888;
-    border-radius: 5x;
-    border: 1px solid grey;
 }
 
-a: link {
-    color: white;
-}
-
-a: visited {
-    color: white;
-}
-
-a: hover {
-    color: #3a444c;
-    cursor: pointer;
-    text-decoration: underline;
+input[type="text"] {
+    height: 30px;
+    width: 200px;
 }
 
 input[type="submit"] {
-    float: right; 
-    color: white; 
-    background-color: #ee6123; 
-    font-weight: bold; 
+    background-color: #000000;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 1px 1px 1px #888888;
+    color: #FFFF00;
     cursor: pointer;
-    border-radius: 5px; 
-    box-shadow: 1px 1px 1px 1px #888888; 
-    font-size: 14px; 
-    height: 30px; 
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    height: 30px;
     padding: 2px 20px;
 }
 
