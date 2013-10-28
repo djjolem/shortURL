@@ -18,11 +18,14 @@
         echo 'Go to link: ' . $link;
 
         if ($link != ""){
-	    if (stripos($link, 'http://') != 0){
-        	header("Location: " . 'http://'. $link);
-	    } else {
+	    if (stripos($link, 'http://') === 0
+		    or stripos($link, 'https://') === 0 
+		    or stripos($link, 'www' === 0)){		
 		header("Location: " . $link); 
+	    } else {
+		header("Location: " . 'http://' . $link); 
 	    }
+
         } else {
             echo '<div> Cant find link with hash: ' . $hash . ' </div>';
         }
