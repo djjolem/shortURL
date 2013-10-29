@@ -9,11 +9,12 @@
 
 <body>
 <?php
+    // redirect to another site
     include 'DBConnection.php';
+    $model = new DBConnection; 
 
     $hash = $_GET["hash"];
     if (isset($hash)){
-        $model = new DBConnection;
         $link = $model->getLink($hash);
         echo 'Go to link: ' . $link;
 
@@ -34,16 +35,37 @@
     <img src="UnderConstruction.png" alt="UnderConstruction"/>
 
     <h1> Create short link: </h1>
-    <form action="generate.php" method="post" >
+    <form action="index.php" method="post" >
         <fieldset>
             <label for="link"> Link </label>
             <input type="text" id="link" name="link" autofocus="autofocus"
-		placeholder="Enter link" />
+        		placeholder="Enter link" />
             <input type="submit" value="Create" />
         </fieldset>
     </form>
 
-<?php } ?>
+<?php 
+    // generate hash
+        $site = "http://z-surlsurl.rhcloud.com"; 
+    
+        $link = $_POST["link"];
+        if ($link != ""){
+            $id = $model->findLink($link); 
+            if ($id == ""){
+                $id = $model->insertNewLink($link); 
+            }
+
+            $hash = base_convert($id, 10, 36); 
+?>
+
+        <div>
+            <p> <?php echo "Your link is: $site/$hash"; ?> </p>
+        </div>
+
+<?php 
+        }
+    } 
+?>
     
 </body>
 </html>
