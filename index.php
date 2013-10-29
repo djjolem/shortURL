@@ -58,8 +58,8 @@
             $hash = base_convert($id, 10, 36); 
 ?>
 
-        <div>
-            <p> <?php echo "Your link is: $site/$hash"; ?> </p>
+        <div class="shortlink">
+            <p class="shortlink"> <?php echo "Your link is: $site/$hash"; ?> </p>
         </div>
 
 <?php 
