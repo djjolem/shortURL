@@ -39,7 +39,7 @@
 ?>
 
     <div>
-        <img class="img-rounded" src="UnderConstruction.png" alt="UnderConstruction"/>
+        <img class="img-rounded" src="underconstruction.png" alt="UnderConstruction"/>
     </div>
   
     <div class="page-header"> 
