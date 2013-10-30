@@ -4,10 +4,17 @@
     <meta name="description" content="Link shortener"/>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
-    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+ 
 </head>
 
 <body>
+<div class="container">
 <?php
     // redirect to another site
     include 'DBConnection.php';
@@ -16,7 +23,6 @@
     $hash = $_GET["hash"];
     if (isset($hash)){
         $link = $model->getLink($hash);
-        echo 'Go to link: ' . $link;
 
         if ($link != ""){
 	        if (stripos($link, 'http://') === 0
@@ -32,16 +38,26 @@
     } else {
 ?>
 
-    <img src="UnderConstruction.png" alt="UnderConstruction"/>
+    <div>
+        <img class="img-rounded" src="UnderConstruction.png" alt="UnderConstruction"/>
+    </div>
+  
+    <div class="page-header"> 
+        <h1> Create short link </h1>  
+    </div>
 
-    <h1> Create short link: </h1>
-    <form action="index.php" method="post" >
-        <fieldset>
-            <label for="link"> Link </label>
-            <input type="text" id="link" name="link" autofocus="autofocus"
-        		placeholder="Enter link" />
-            <input type="submit" value="Create" />
-        </fieldset>
+    <form action="index.php" method="post">
+    <div class="row">
+    <div class="col-lg-6">
+    <div class="input-group" id="input">
+        <input class="form-control" type="text" id="link" name="link" autofocus="autofocus"
+            placeholder="Enter link" />
+        <span class="input-group-btn"> 
+            <button class="btn btn-primary" type=button" onclick="submit();"> Create </button>
+        </span>
+    </div>
+    </div>
+    </div>
     </form>
 
 <?php 
@@ -58,15 +74,19 @@
             $hash = base_convert($id, 10, 36); 
 ?>
 
-        <div class="shortlink">
-            <p class="shortlink"> <?php echo "Your link is: $site/$hash"; ?> </p>
+        <div class="panel panel-primary">
+            <div class="panel-heading"> Your short link </div>
+            <div class="panel-body">
+                <?php echo "$site/$hash"; ?> 
+            </div>
         </div>
 
 <?php 
         }
     } 
 ?>
-    
+
+</div>
 </body>
 </html>
 
