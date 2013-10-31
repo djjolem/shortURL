@@ -5,12 +5,10 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Optional theme -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
- 
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/my_style.css" />
 </head>
 
 <body>
@@ -38,25 +36,27 @@
     } else {
 ?>
 
-    <div>
+    <div id="img_construction">
         <img class="img-rounded" src="underconstruction.png" alt="UnderConstruction"/>
     </div>
   
-    <div class="page-header"> 
+    <div id="head_text" class="page-header"> 
         <h1> Create short link </h1>  
     </div>
 
     <form action="index.php" method="post">
     <div class="row">
-    <div class="col-lg-6">
-    <div class="input-group" id="input">
-        <input class="form-control" type="text" id="link" name="link" autofocus="autofocus"
-            placeholder="Enter link" />
-        <span class="input-group-btn"> 
-            <button class="btn btn-primary" type=button" onclick="submit();"> Create </button>
-        </span>
-    </div>
-    </div>
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+        <div class="input-group" id="input">
+            <input class="form-control" type="text" id="link" name="link" autofocus="autofocus"
+                placeholder="Enter link" />
+            <span class="input-group-btn"> 
+                <button class="btn btn-primary" type=button" onclick="submit();"> Create </button>
+            </span>
+        </div>
+        </div>
+        <div class="col-lg-3"></div>
     </div>
     </form>
 
