@@ -44,7 +44,7 @@
         <h1> Create short link </h1>  
     </div>
 
-    <form action="index.php" method="post">
+    <form class="from-horizontall" role="form" action="index.php" method="post">
     <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
@@ -89,33 +89,34 @@
 	<!-- login form -->
 	<form class="form-horizontal" role="form">
 		<div class="form-group">
-    		<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-    		<div class="col-sm-10">
-      			<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-    		</div>
+			<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+			<div class="col-sm-10">
+				<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+			</div>
   		</div>
+
   		<div class="form-group">
-    		<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-    		<div class="col-sm-10">
-      			<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-    		</div>
+			<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+			<div class="col-sm-10">
+				<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+			</div>
   		</div>
+
   		<div class="form-group">
-    		<div class="col-sm-offset-2 col-sm-10">
-      			<div class="checkbox">
-        			<label><input type="checkbox"> Remember me </label>
-      			</div>
-    		</div>
-  		</div>
-  		<div class="form-group">
-    		<div class="col-sm-offset-2 col-sm-10">
-      			<button type="submit" class="btn btn-default">Sign in</button>
-    		</div>
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-default">Sign in</button>
+			</div>
   		</div>
 	</form>
 
 	<!-- add create account -->
-	<div> Create account </div>
+	<form class="form-horizontal" role="form">
+	<div class="form-group"> 
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-default"> Create account </button>
+		</div>
+	</div>
+	</form>
 
    
 </div><!--id=container-->
