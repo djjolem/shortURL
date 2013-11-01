@@ -87,7 +87,7 @@
 ?>
 
 	<!-- login form -->
-	<form class="form-horizontal" role="form">
+	<form class="form-horizontal" role="form" action="signin.php" method="post">
 		<div class="form-group">
 			<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
 			<div class="col-sm-10">
@@ -110,7 +110,7 @@
 	</form>
 
 	<!-- add create account -->
-	<form class="form-horizontal" role="form">
+	<form class="form-horizontal" role="form" action="newaccount.php" method="post">
 	<div class="form-group"> 
 		<div class="col-sm-offset-2 col-sm-10">
 			<button type="submit" class="btn btn-default"> Create account </button>
