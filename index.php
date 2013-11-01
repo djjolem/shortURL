@@ -118,6 +118,6 @@
 	<div> Create account </div>
 
    
-</div id=container> 
+</div><!--id=container-->
 </body>
 </html>
