@@ -1,5 +1,9 @@
 <html>
 <head>
+    <?php
+        session_start(); 
+    ?> 
+    
     <title> Link to ... </title>
     <meta name="description" content="Link shortener"/>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -9,6 +13,8 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/my_style.css" />
+    
+
 </head>
 
 <body>
@@ -18,8 +24,8 @@
     include 'DBConnection.php';
     $model = new DBConnection; 
 
-    $hash = $_GET["hash"];
-    if (isset($hash)){
+    if (isset($_GET["hash"])){
+        $hash = $_GET["hash"];
         $link = $model->getLink($hash);
 
         if ($link != ""){
@@ -63,9 +69,9 @@
 <?php 
     // generate hash
         $site = "http://z-surlsurl.rhcloud.com"; 
-    
-        $link = $_POST["link"];
-        if ($link != ""){
+   
+        if (isset($_POST["link"])){ 
+            $link = $_POST["link"];
             $id = $model->findLink($link); 
             if ($id == ""){
                 $id = $model->insertNewLink($link); 
@@ -86,19 +92,31 @@
     }
 ?>
 
+<?php 
+
+    $login = FALSE; 
+    if (isset($_SESSION["signed"])){
+        $login = (bool)$_SESSION["signed"]; 
+    }
+
+    if (!$login){
+?>
+    
 	<!-- login form -->
 	<form class="form-horizontal" role="form" action="signin.php" method="post">
 		<div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+			<label for="inputEmail" class="col-sm-2 control-label">Email</label>
 			<div class="col-sm-10">
-				<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+				<input type="email" class="form-control" id="inputEmail" 
+                    name="inputEmail" placeholder="Email">
 			</div>
   		</div>
 
   		<div class="form-group">
-			<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+			<label for="inputPassword" class="col-sm-2 control-label">Password</label>
 			<div class="col-sm-10">
-				<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+				<input type="password" class="form-control" id="inputPassword" 
+                    name="inputPassword" placeholder="Password">
 			</div>
   		</div>
 
@@ -118,7 +136,11 @@
 	</div>
 	</form>
 
-   
+<?php
+    }
+?>
+
 </div><!--id=container-->
 </body>
 </html>
+

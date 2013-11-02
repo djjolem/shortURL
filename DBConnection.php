@@ -44,7 +44,11 @@ class DBConnection {
 
         return "";
     }
+    
 
+    public function doesExistUser($user, $pass){
+        return true; 
+    }
 }
 ?>
 
