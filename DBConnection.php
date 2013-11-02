@@ -21,7 +21,7 @@ class DBConnection {
     public function getLink($hash){
         $id = base_convert($hash, 36, 10);
 
-        $result = mysqli_query($this->con, "SELECT * FROM short WHERE id = '$id';");
+        $result = mysqli_query($this->con, "SELECT * FROM " . DBT_URL . " WHERE id = '$id';");
         $row = mysqli_fetch_array($result);
         if (!is_null($row)){
             return $row['link'];
@@ -32,13 +32,13 @@ class DBConnection {
 
 
     public function insertNewLink($link){
-        mysqli_query($this->con, "INSERT INTO short (link) VALUES('" . $link . "');");
+        mysqli_query($this->con, "INSERT INTO " . DBT_URL . " (link) VALUES('" . $link . "');");
         return mysqli_insert_id($this->con);
     }
 
     // if link exist in DB return ID -
     public function findLink($link){
-        $result = mysqli_query($this->con, "SELECT * FROM short WHERE link = '" . $link . "';");
+        $result = mysqli_query($this->con, "SELECT * FROM " . DBT_URL . " WHERE link = '" . $link . "';");
         $row = mysqli_fetch_array($result);
         if (!is_null($row)){
             return $row['id'];
