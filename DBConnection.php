@@ -1,5 +1,7 @@
 <?php
 
+require('config.php');
+
 /**
     This class is for connection with database and all queries should execute trought this class.
 */
@@ -7,7 +9,7 @@ class DBConnection {
    private $con;
 
     function __construct(){
-        $this->con = mysqli_connect("127.10.30.130", "short", "short", "short");
+        $this->con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         if (mysqli_connect_error($this->con)){
             error_log ("DBConnection.php: Failed to connect to MySQL: " . mysqli_connect_error());
         }
