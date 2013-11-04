@@ -122,7 +122,7 @@
 
   		<div class="form-group">
 			<div class="col-sm-offset-2 col-sm-10">
-				<button type="submit" class="btn btn-default">Sign in</button>
+				<button type="submit" class="btn btn-default"> Sign in </button>
 			</div>
   		</div>
 	</form>
@@ -137,9 +137,18 @@
 	</form>
 
 <?php
+    } else { 
+?>
+	<form class="form-horizontal" role="form" action="signout.php" method="post">
+	    <div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+		    <button type="submit" class="btn btn-default"> Sign out </button>
+		</div>
+	    </div>
+	</form>
+<?php
     }
 ?>
-
 </div><!--id=container-->
 </body>
 </html>
