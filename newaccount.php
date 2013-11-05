@@ -15,12 +15,12 @@
 <body>
     <div class="container" id="container">
     <div id="head_text" class="page-header">
-	<h1> Create new account... </h1>
+	<h1> Create new account ... </h1>
     </div>
 
 
 	<!-- creat new accoutn -->
-        <form class="form-horizontal" role="form" action="signin.php" method="post">
+        <form class="form-horizontal" role="form" action="creat.php" method="post">
                 <div class="form-group">
                         <label for="inputEmail" class="col-sm-2 control-label">Email</label>
                         <div class="col-sm-10">
