@@ -131,7 +131,7 @@
 	<form class="form-horizontal" role="form" action="newaccount.php" method="post">
 	<div class="form-group"> 
 		<div class="col-sm-offset-2 col-sm-10">
-			<button type="submit" class="btn btn-default"> Create account </button>
+			<button type="submit" class="btn btn-default"> Create an account </button>
 		</div>
 	</div>
 	</form>

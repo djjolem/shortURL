@@ -3,7 +3,7 @@
     
     session_start();
     $model = new DBConnection;
-
+    
     $user = $_POST["inputEmail"]; 
     $pass = $_POST["inputPassword"]; 
 
