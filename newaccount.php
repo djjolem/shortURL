@@ -13,7 +13,10 @@
 
 ?> 
 <body>
-    <div> Create new account... </div>
+    <div class="container" id="container">
+    <div id="head_text" class="page-header">
+	<h1> Create new account... </h1>
+    </div>
 
 
 	<!-- creat new accoutn -->
@@ -49,7 +52,7 @@
                         </div>
                 </div>
 	</form>
-
+    </div>
 </body>
 
 </html>
