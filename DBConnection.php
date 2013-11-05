@@ -49,12 +49,12 @@ class DBConnection {
     
 
     public function doesExistUser($user, $pass){
-        $result = mysqli_query($this->con, "SELECT count(user_id) as sum FROM " . DBT_USER . 
-            " WHERE username=$user and hashpass = $pass;");
+        $result = mysqli_query($this->con, "SELECT * FROM " . DBT_USER . 
+            " WHERE username = '$user' and password = '$pass';");
         $row = mysqli_fetch_array($result); 
-        if  (!is_null($row)){
+        if  (!is_null($row)){   
             // check does returned values match user and pass 
-            if ($row['sum'] == 1){
+            if ($row['username'] == $user && $row['password'] == $pass){
                 return true; 
             } 
         }
