@@ -7,3 +7,10 @@
     text-align: center;    
 }
 
+#inputPassword, 
+#inputEmail, 
+#inputPassword1, 
+#inputPassword2 {
+    width: 70%; 
+}
+
