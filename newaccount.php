@@ -18,6 +18,15 @@
 	<h1> Create new account ... </h1>
     </div>
 
+<?php
+    if (isset($_GET["error"])){
+?>
+    <div class="text">
+	<h2> <?php echo($_GET["error"]); ?>
+    </div>
+<?php
+    }
+?>
 
 	<!-- creat new accoutn -->
         <form class="form-horizontal" role="form" action="creat.php" method="post">
