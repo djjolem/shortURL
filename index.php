@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <?php
@@ -13,34 +14,12 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/my_style.css" />
-    
 
 </head>
 
 <body>
 <div class="container" id="container">
 
-<nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-    <ul class="nav navbar-nav">
-        <li class="active"><a href="#"> Home </a></li>
-        <li><a href="#"> Profile </a></li>
-        <li><a href="#"> Messages </a></li>
-    </ul>
-    </div>
-   
-    <div class="collapse navbar-collapse"> 
-    <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-togle="dropdown"> User <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                <li><a href="#"> Action </a></li>
-                <li><a href="#"> Another </a></li>
-            </ul>
-        </li>
-    </ul>
-    </div>
-</nav>
 
 <?php
     // redirect to another site
@@ -173,6 +152,14 @@
     }
 ?>
 </div><!--id=container-->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/bootstrap.js"></script>
+
 </body>
 </html>
 
