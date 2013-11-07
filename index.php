@@ -19,6 +19,29 @@
 
 <body>
 <div class="container" id="container">
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="navbar-header">
+    <ul class="nav navbar-nav">
+        <li class="active"><a href="#"> Home </a></li>
+        <li><a href="#"> Profile </a></li>
+        <li><a href="#"> Messages </a></li>
+    </ul>
+    </div>
+   
+    <div class="collapse navbar-collapse"> 
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-togle="dropdown"> User <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+                <li><a href="#"> Action </a></li>
+                <li><a href="#"> Another </a></li>
+            </ul>
+        </li>
+    </ul>
+    </div>
+</nav>
+
 <?php
     // redirect to another site
     include 'DBConnection.php';
