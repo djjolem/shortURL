@@ -18,8 +18,31 @@
 </head>
 
 <body>
-<div class="container" id="container">
 
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation"> 
+    <div class="container">
+    <div class="navbar-header">
+          <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand"> Short URL </a>
+    </div>
+    
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container" id="container">
 
 <?php
     // redirect to another site
