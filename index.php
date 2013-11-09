@@ -14,6 +14,30 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/my_style.css" />
+    
+<?php
+    // redirect to another site
+    include 'DBConnection.php';
+    $model = new DBConnection; 
+
+    if (isset($_GET["hash"])){
+        $hash = $_GET["hash"];
+        $link = $model->getLink($hash);
+
+        if ($link != ""){
+	        if (stripos($link, 'http://') === 0
+		            or stripos($link, 'https://') === 0 
+		            or stripos($link, 'www' === 0)){		
+		        header("Location: " . $link); 
+	        } else {
+		        header("Location: " . 'http://' . $link); 
+	        }
+        } else {
+            echo '<div> Cant find link with hash: ' . $hash . ' </div>';
+        }
+    } else {
+?>
+
 
 </head>
 
@@ -37,28 +61,6 @@
 <div class="container" id="container">
 <div class="jumbotron">
 
-<?php
-    // redirect to another site
-    include 'DBConnection.php';
-    $model = new DBConnection; 
-
-    if (isset($_GET["hash"])){
-        $hash = $_GET["hash"];
-        $link = $model->getLink($hash);
-
-        if ($link != ""){
-	        if (stripos($link, 'http://') === 0
-		            or stripos($link, 'https://') === 0 
-		            or stripos($link, 'www' === 0)){		
-		        header("Location: " . $link); 
-	        } else {
-		        header("Location: " . 'http://' . $link); 
-	        }
-        } else {
-            echo '<div> Cant find link with hash: ' . $hash . ' </div>';
-        }
-    } else {
-?>
 
     <div id="img_construction">
         <img class="img-rounded" src="underconstruction.png" alt="UnderConstruction"/>
