@@ -19,10 +19,9 @@
 
 <body>
 
-
 <div class="navbar navbar-default navbar-fixed-top" role="navigation"> 
     <div class="container">
-    <div class="navbar-header">
+        <div class="navbar-header">
           <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
@@ -30,7 +29,7 @@
             <span class="icon-bar"></span>
           </button>
           <a href="#" class="navbar-brand"> Short URL </a>
-    </div>
+        </div>
     
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -43,6 +42,7 @@
 </div>
 
 <div class="container" id="container">
+<div class="jumbotron">
 
 <?php
     // redirect to another site
@@ -172,6 +172,7 @@
 <?php
     }
 ?>
+</div>
 </div><!--id=container-->
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
