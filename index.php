@@ -76,34 +76,40 @@
                     Sign in <b class="caret"></b> 
             </button>
             
-            <div class="dropdown-menu"> 
+            <div class="dropdown-menu">
+            <div class="btn-group">
             <form class="form-horizontal" role="form" action="signin.php" method="post">
                 <div class="form-group">
-                    <div class="">
-                        <label></label>
+                    <div class="col-sm-10">
+                        <label for="inputEmail" class="col-sm-2 control-label"></label>
                         <input type="email" class="form-control" id="inputEmail" 
                             name="inputEmail" placeholder="Email">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <div class="">
+                    <div class="col-sm-10">
+                        <label for="inputPassword" class="col-sm-2 control-label"></label>
                         <input type="password" class="form-control" id="inputPassword" 
                             name="inputPassword" placeholder="Password">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <input id="remember_me" type="checkbox" name="remember_me" value="1" />
-                    <label class="string optional" for="remember_me"> Remember me</label>
+                    <div class="col-sm-10">
+                        <input id="remember_me" type="checkbox" name="remember_me" value="1" />
+                        <label class="string optional" for="remember_me"> Remember me</label>
+                    </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
+                        <label for="" class="col-sm-2 control-label"></label>
                         <button type="submit" class="btn btn-default"> Sign in </button>
                     </div>
                 </div>          
             </form>
+            </div>
             </div>
         </li>
 
