@@ -52,8 +52,8 @@
         <h1> Create short link </h1>  
     </div>
 
-    <form class="from-horizontall" role="form" action="index.php" method="post">
-    <div class="row">
+    <form class="form-horizontal" role="form" action="index.php" method="post">
+    <div class="form-group">
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
         <div class="input-group" id="input">
@@ -63,6 +63,7 @@
                 <button class="btn btn-primary" type="button" onclick="submit();"> Create </button>
             </span>
         </div>
+        <div></div>
         </div>
         <div class="col-lg-3"></div>
     </div>
@@ -92,9 +93,6 @@
 <?php 
         }
     }
-?>
-
-<?php 
 
     $login = FALSE; 
     if (isset($_SESSION["signed"])){
