@@ -37,33 +37,92 @@
         }
     } else {
 ?>
-
-
 </head>
+
 
 <body>
 
 <div class="navbar navbar-default navbar-fixed-top" role="navigation"> 
-    <div class="container">
-        <div class="navbar-header">
-          <a href="" class="navbar-brand"> Short URL </a>
-        </div>
-    
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+<div class="container">
+
+    <div class="navbar-header">
+        <a href="" class="navbar-brand"> Short URL </a>
     </div>
+    
+    <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right">
+
+        <!-- create account --> 
+        <li>
+        <form class="form-horizontal" role="form" action="newaccount.php" method="post">
+        <div class="navbar-header">
+            <div class="form-group"> 
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default"> Sign up </button>
+            </div>
+            </div>
+        </div>
+        </form>
+        </li>
+
+        <!-- vertical divider -->
+        <li>
+        <div class=""> &nbsp; &nbsp; </div>
+        </li>
+
+        <!-- singn in accoutn --> 
+        <li class="dropdown">
+            <button type="submit" class="dropdown-toggle btn btn-default" data-toggle="dropdown" > 
+                    Sign in <b class="caret"></b> 
+            </button>
+            
+            <div class="dropdown-menu"> 
+            <form class="form-horizontal" role="form" action="signin.php" method="post">
+                <div class="form-group">
+                    <div class="">
+                        <label></label>
+                        <input type="email" class="form-control" id="inputEmail" 
+                            name="inputEmail" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="">
+                        <input type="password" class="form-control" id="inputPassword" 
+                            name="inputPassword" placeholder="Password">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input id="remember_me" type="checkbox" name="remember_me" value="1" />
+                    <label class="string optional" for="remember_me"> Remember me</label>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default"> Sign in </button>
+                    </div>
+                </div>          
+            </form>
+            </div>
+        </li>
+
+        <li>
+            <div class=""> &nbsp; &nbsp; </div>
+        </li>
+      </ul>
+    </div><!--.nav-collapse-->
+
+</div><!--.container-->
 </div>
+
 
 <div class="container" id="container">
 <div class="jumbotron">
 
 
     <div id="img_construction">
-        <img class="img-rounded" src="underconstruction.png" alt="UnderConstruction"/>
+        <img class="img-rounded img-responsive" src="underconstruction.png" alt="UnderConstruction"/>
     </div>
   
     <div id="head_text" class="page-header"> 
@@ -176,6 +235,19 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="js/bootstrap.min.js"></script> 
     <script src="js/bootstrap.js"></script>
+
+
+<script type="text/javascript">
+    $(function() {
+        // Setup drop down menu
+        $('.dropdown-toggle').dropdown();
+ 
+        // Fix input element click problem
+        $('.dropdown input, .dropdown label').click(function(e) {
+            e.stopPropagation();
+        });
+    });
+</script>
 
 </body>
 </html>
