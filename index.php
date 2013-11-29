@@ -44,7 +44,7 @@
 
 <div class="navbar navbar-default navbar-fixed-top" role="navigation"> 
 <div class="container">
-
+<!--
     <div class="navbar-header">
         <a href="" class="navbar-brand"> Short URL </a>
     </div>
@@ -52,7 +52,7 @@
     <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav navbar-right">
 
-        <!-- create account --> 
+        <!-- create account 
         <li>
         <form class="form-horizontal" role="form" action="newaccount.php" method="post">
         <div class="navbar-header">
@@ -65,12 +65,12 @@
         </form>
         </li>
 
-        <!-- vertical divider -->
+        <!-- vertical divider 
         <li>
         <div class=""> &nbsp; &nbsp; </div>
         </li>
 
-        <!-- singn in accoutn --> 
+        <!-- singn in accoutn 
         <li class="dropdown">
             <button type="submit" class="dropdown-toggle btn btn-default" data-toggle="dropdown" > 
                     Sign in <b class="caret"></b> 
@@ -185,7 +185,7 @@
     if (!$login){
 ?>
     
-	<!-- login form -->
+	<!-- login form 
 	<form class="form-horizontal" role="form" action="signin.php" method="post">
 		<div class="form-group">
 			<label for="inputEmail" class="col-sm-2 control-label">Email</label>
@@ -210,7 +210,8 @@
   		</div>
 	</form>
 
-	<!-- add create account -->
+
+	<!-- add create account 
 	<form class="form-horizontal" role="form" action="newaccount.php" method="post">
 	<div class="form-group"> 
 		<div class="col-sm-offset-2 col-sm-10">
@@ -218,6 +219,7 @@
 		</div>
 	</div>
 	</form>
+    -->
 
 <?php
     } else { 
